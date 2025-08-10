@@ -1,13 +1,3 @@
-# default: test
-# 	gcc -o test ./output/test -lhashtable -L$(pwd)
-# 	./test
-#
-# libhashtable: hash_table.c
-# 	gcc -o libhashtable.so -fpic -shared hash_table.c
-#
-# test: test.c
-# 	gcc -Wall -g test.c -o ./output/test
-
 CC=gcc
 CFLAGS=-Wall
 
