@@ -2,15 +2,15 @@
 #include <string.h>
 
 /** 
- * FNV-1 hash function implementation
+ * FNV-1a hash function implementation
  *
  * @see https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function
  */
-size_t hash_fnv1(const char *key) {
+size_t hash_fnv1a(const char *key) {
   uint64_t hash_value = FNV_OFFSET_BASIS;
   for (size_t i = 0; i < strlen(key); i++) {
-    hash_value *= FNV_PRIME;
     hash_value ^= (unsigned char)key[i];
+    hash_value *= FNV_PRIME;
   }
   return hash_value;
 }
